@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}ひかりメモ{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="sample-bar">制作見本です。実在のサービスではありません。本名や住所は書かないでください。</div>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="{{ url_for('index') }}">HIKARI MEMO</a>
+      <nav>
+        <a href="{{ url_for('index') }}">書く</a>
+        <a href="{{ url_for('notes') }}">一覧</a>
+      </nav>
+    </header>
+    {% block body %}{% endblock %}
+    <footer>
+      <p>Python（Flask）の見本。会員・決済はありません。送った内容はこのサイトの一覧に残ります。</p>
+    </footer>
+  </div>
+</body>
+</html>

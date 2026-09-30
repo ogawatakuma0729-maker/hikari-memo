@@ -1,0 +1,66 @@
+:root {
+  --bg: #f3f1ea;
+  --ink: #1e2a24;
+  --muted: #5c6b63;
+  --line: #d7d2c4;
+  --card: #fffdf8;
+  --accent: #2f6f4e;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+}
+.sample-bar {
+  background: #1e2a24;
+  color: #f3f1ea;
+  text-align: center;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.logo { font-weight: 800; letter-spacing: .06em; color: var(--ink); text-decoration: none; }
+nav { display: flex; gap: 14px; }
+nav a { color: var(--ink); text-decoration: none; }
+.hero h1 { font-size: 28px; margin: 8px 0; }
+.hero p, .note, .meta, footer { color: var(--muted); }
+form, .list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+form { display: grid; gap: 8px; }
+label { font-weight: 700; font-size: 14px; }
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+}
+button {
+  margin-top: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.error { color: #9a2f2f; font-weight: 700; }
+.list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.list p { margin: 0; }
+.meta { font-size: 13px; margin-bottom: 6px !important; }
+footer { margin-top: 40px; font-size: 13px; }

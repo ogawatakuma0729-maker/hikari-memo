@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}ひかりメモ｜一覧{% endblock %}
+{% block body %}
+<section class="hero">
+  <h1>残ったメモ</h1>
+  <p>新しい順です。公開サーバーでは再起動で消えることがあります。</p>
+</section>
+{% if rows %}
+  <ul class="list">
+    {% for row in rows %}
+      <li>
+        <p class="meta">{{ row["created_at"] }}　{{ row["name"] }}</p>
+        <p>{{ row["body"] }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="note">まだありません。<a href="{{ url_for('index') }}">書く</a></p>
+{% endif %}
+{% endblock %}
